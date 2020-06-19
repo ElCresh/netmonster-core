@@ -66,3 +66,4 @@ fun Int.toDbm() = -113 + 2 * this
 
 fun isHuawei() = Build.MANUFACTURER.equals("huawei", ignoreCase = true)
 fun isSamsung() = Build.MANUFACTURER.equals("samsung", ignoreCase = true)
+fun isExynos() = Build.HARDWARE.contains("exynos", ignoreCase = true)
