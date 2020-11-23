@@ -77,7 +77,13 @@ object BandTableNr {
                 }
 
                 return if (filtered.isEmpty()) {
-                    null
+                    if(candidates[0].number == 77 && candidates[1].number == 78) {
+                        candidates[1];
+                    } else if (candidates[0].number == 66 && candidates[1].number == 1) {
+                        candidates[1];
+                    } else {
+                        null;
+                    }
                 } else if (filtered.size == 1) {
                     filtered[0]
                 } else {
@@ -87,7 +93,13 @@ object BandTableNr {
                     if (uniqueName.size == 1) {
                         uniqueName[0].copy(number = null)
                     } else {
-                        null
+                       if(filtered[0].number == 77 && filtered[1].number == 78) {
+                           filtered[1];
+                       } else if (filtered[0].number == 66 && filtered[1].number == 1) {
+                           filtered[1];
+                       } else {
+                           null;
+                       }
                     }
                 }
             }
